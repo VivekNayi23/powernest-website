@@ -3,37 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PowerNest Digital</title>
+  <title>PowerNest Digital - One Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <!-- AOS CSS (for animation) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
+  <!-- 🔗 Navigation -->
   <header>
-    <h1>PowerNest Digital</h1>
-    <p>Building Smart Solutions with Power & Precision</p>
+    <div class="logo">PowerNest Digital</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Welcome to PowerNest Digital</h2>
-      <p>We build scalable and powerful digital solutions to transform your business.</p>
-      <a href="contact.html" class="cta-button">Get In Touch</a>
+  <!-- 🏠 Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome to PowerNest Digital</h1>
+    <p>Building Smart Solutions with Power & Precision</p>
+    <a href="#contact" class="cta-button">Let's Talk</a>
+  </section>
+
+  <!-- 👨‍💼 About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a team of developers specializing in SharePoint, Power Platform, and Web Development. From enterprise-level solutions to small business websites, we deliver secure, scalable, and user-friendly solutions.</p>
+  </section>
+
+  <!-- 💼 Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box" data-aos="fade-up">
+        <h3>Web Development</h3>
+        <p>Responsive, fast websites using HTML, CSS, JS, React, and Angular.</p>
+      </div>
+      <div class="service-box" data-aos="fade-up">
+        <h3>SharePoint Solutions</h3>
+        <p>SPFx WebParts, List Automation, Secure Document Libraries.</p>
+      </div>
+      <div class="service-box" data-aos="fade-up">
+        <h3>Power Platform</h3>
+        <p>Canvas Apps, Power Automate workflows, and Power BI dashboards.</p>
+      </div>
     </div>
   </section>
-</main>
 
+  <!-- 📩 Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <label>Name</label>
+      <input type="text" required />
+      <label>Email</label>
+      <input type="email" required />
+      <label>Message</label>
+      <textarea rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
+  <!-- 🔻 Footer -->
   <footer>
     <p>&copy; 2025 PowerNest Digital. All rights reserved.</p>
+    <p><a href="#home">Back to top ↑</a></p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.querySelector(".contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Message sent! We'll be in touch.");
+      this.reset();
+    });
+  </script>
+
 </body>
 </html>
