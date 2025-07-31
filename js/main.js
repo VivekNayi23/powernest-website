@@ -1,11 +1,12 @@
-// In main.js
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".contact-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Thanks! Your message has been sent.");
-      form.reset();
+document.addEventListener("DOMContentLoaded", function () {
+  function revealOnScroll() {
+    document.querySelectorAll('.card, .fade-in').forEach(el => {
+      let winHeight = window.innerHeight;
+      if (el.getBoundingClientRect().top < winHeight * 0.88) {
+        el.classList.add('visible');
+      }
     });
   }
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
 });
