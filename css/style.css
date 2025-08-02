@@ -1,7 +1,8 @@
 :root {
   --primary: #0D1B2A;
   --accent: #E0A458;
-  --light-bg: #F0F4F8;
+  --gradient: linear-gradient(135deg, #0D1B2A, #E0A458);
+  --light-bg: #F8FAFC;
   --text: #1A1A1A;
   --white: #ffffff;
 }
@@ -11,41 +12,38 @@ body {
   font-family: 'Poppins', sans-serif;
   background: var(--light-bg);
   color: var(--text);
-  scroll-behavior: smooth;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 15px 25px;
   background: var(--white);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
-  flex-wrap: wrap;
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 800;
   color: var(--primary);
 }
 
 nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  gap: 20px;
 }
 
 nav a {
-  margin: 10px;
-  font-weight: 600;
-  color: var(--primary);
   text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
@@ -53,32 +51,39 @@ nav a:hover {
   color: var(--accent);
 }
 
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Hero */
 .hero {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: var(--gradient);
   color: var(--white);
-  padding: 150px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: fadeUp 1s ease forwards;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .cta-button {
   background: var(--white);
   color: var(--primary);
-  padding: 16px 32px;
+  padding: 14px 28px;
   border-radius: 50px;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: all 0.3s;
-  display: inline-block;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
@@ -87,72 +92,67 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+/* Sections */
 section {
-  padding: 100px 20px;
+  padding: 80px 20px;
   max-width: 1200px;
   margin: auto;
   text-align: center;
 }
 
 h2 {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  margin-bottom: 25px;
   color: var(--primary);
 }
 
-/* Grids */
-.services,
-.process-steps,
-.testimonials {
+/* Grid & Cards */
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 
-/* Cards */
-.service-box,
-.step,
-.testimonial {
+.card {
   background: var(--white);
-  padding: 30px;
+  padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-box:hover,
-.step:hover,
-.testimonial:hover {
-  transform: translateY(-8px);
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
-.service-box h3,
-.step h3 {
+.card h3 {
   color: var(--accent);
 }
 
+/* Contact Form */
 .contact-form {
-  max-width: 600px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-width: 500px;
+  margin: auto;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 14px;
+  border: 1px solid #ddd;
   border-radius: 6px;
-  border: 1px solid #ccc;
   font-size: 1rem;
 }
 
 .contact-form button {
   background: var(--accent);
-  color: white;
-  padding: 16px;
-  font-size: 1.05rem;
+  color: var(--white);
   border: none;
+  padding: 14px;
+  font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -162,86 +162,63 @@ h2 {
   background: var(--primary);
 }
 
+/* Footer */
 footer {
   background: var(--primary);
   color: var(--white);
-  padding: 30px;
+  padding: 20px;
   text-align: center;
 }
 
 footer a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 500;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  nav {
-    justify-content: center;
-  }
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
 }
 
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  header {
+  nav {
+    display: none;
     flex-direction: column;
+    background: var(--white);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 
   .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    font-size: 1rem;
-    padding: 12px 24px;
-  }
-
-  section {
-    padding: 60px 15px;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 22px;
-  }
-
-  nav a {
-    margin: 8px;
-    font-size: 14px;
-  }
-
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  .cta-button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-
-  footer {
-    font-size: 14px;
+    font-size: 2.2rem;
   }
 }

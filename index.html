@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF‑8" />
-  <meta name="viewport" content="width=device‑width, initial‑scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PowerNest Digital – Smart Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header data-aos="fade-down">
+  <!-- Header -->
+  <header>
     <div class="logo">PowerNest Digital</div>
-    <nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#process">Process</a>
@@ -23,32 +23,32 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1 data-aos="fade-in">Empowering Your Digital Journey</h1>
-    <p data-aos="fade-in" data-aos-delay="200">SharePoint. Power Automate. Web Development. Delivered with precision and impact.</p>
-    <a href="#contact" class="cta-button" data-aos="zoom-in" data-aos-delay="400">Get Started</a>
+  <!-- Hero -->
+  <section id="home" class="hero fade-in">
+    <h1>Empowering Your Digital Journey</h1>
+    <p>SharePoint. Power Automate. Web Development. Delivered with precision and impact.</p>
+    <a href="#contact" class="cta-button">Get Started</a>
   </section>
 
   <!-- About -->
-  <section id="about" data-aos="fade-up">
+  <section id="about" class="fade-in">
     <h2>Who We Are</h2>
     <p>PowerNest Digital is a results-driven team delivering enterprise-grade digital solutions. We translate business needs into scalable, secure, and intuitive digital experiences.</p>
   </section>
 
   <!-- Process -->
-  <section id="process" data-aos="fade-up">
+  <section id="process" class="fade-in">
     <h2>Our Process</h2>
-    <div class="process-steps">
-      <div class="step" data-aos="fade-right" data-aos-delay="100">
+    <div class="grid">
+      <div class="card">
         <h3>Discover</h3>
         <p>Understanding your goals, audience, and workflow to tailor our solutions to your needs.</p>
       </div>
-      <div class="step" data-aos="fade-up" data-aos-delay="200">
+      <div class="card">
         <h3>Design</h3>
         <p>Crafting intuitive interfaces, beautiful visuals, and clean architecture for maximum usability.</p>
       </div>
-      <div class="step" data-aos="fade-left" data-aos-delay="300">
+      <div class="card">
         <h3>Deliver</h3>
         <p>Implementing, testing, and deploying high-quality solutions with training and support.</p>
       </div>
@@ -56,74 +56,56 @@
   </section>
 
   <!-- Services -->
-  <section id="services">
-    <h2 data-aos="fade-up">Our Services</h2>
-    <div class="services">
-      <div class="service-box" data-aos="flip-left" data-aos-delay="100">
+  <section id="services" class="fade-in">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
         <h3>Web Development</h3>
         <p>Modern web apps using React, Angular, or Vue. SEO-optimized, lightning-fast, and cross-platform.</p>
       </div>
-      <div class="service-box" data-aos="flip-left" data-aos-delay="200">
+      <div class="card">
         <h3>SharePoint Solutions</h3>
         <p>Custom SPFx web parts, workflows, and secure content management tailored for collaboration.</p>
       </div>
-      <div class="service-box" data-aos="flip-left" data-aos-delay="300">
+      <div class="card">
         <h3>Power Platform</h3>
-        <p>Canvas & Model‑Driven Apps, Power Automate flows, Power BI dashboards—insights, automation, action.</p>
+        <p>Canvas & Model-Driven Apps, Power Automate flows, Power BI dashboards—insights, automation, action.</p>
       </div>
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section id="testimonials" data-aos="fade-up">
+  <section id="testimonials" class="fade-in">
     <h2>Client Testimonials</h2>
-    <div class="testimonials">
-      <div class="testimonial" data-aos="zoom-in" data-aos-delay="100">
-        <p>“PowerNest transformed our document management with SharePoint automation—it’s a game‑changer.”</p>
-        <h4>— Arun Sharma, Enterprise Client</h4>
+    <div class="grid">
+      <div class="card">
+        <p>“PowerNest transformed our document management with SharePoint automation—it’s a game-changer.”</p>
+        <h4>— Arun Sharma</h4>
       </div>
-      <div class="testimonial" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card">
         <p>“Their React site doubled our traffic and improved conversions in weeks.”</p>
-        <h4>— Priya Desai, Startup Owner</h4>
+        <h4>— Priya Desai</h4>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" data-aos="fade-up">
+  <section id="contact" class="fade-in">
     <h2>Let's Chat</h2>
     <form class="contact-form">
-      <label>Name</label>
       <input type="text" placeholder="Your Name" required />
-      <label>Email</label>
       <input type="email" placeholder="your@example.com" required />
-      <label>Message</label>
       <textarea rows="5" placeholder="How can we help you?" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <!-- Footer -->
-  <footer data-aos="fade-up">
+  <footer>
     <p>© 2025 PowerNest Digital. All rights reserved.</p>
     <p><a href="#home">Back to top ↑</a></p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 800 });
-    document.querySelectorAll("nav a").forEach(a => {
-      a.addEventListener("click", e => {
-        e.preventDefault();
-        document.querySelector(a.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
-      });
-    });
-    document.querySelector(".contact-form").addEventListener("submit", e => {
-      e.preventDefault();
-      alert("Thanks! Your message has been sent.");
-      e.target.reset();
-    });
-  </script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
