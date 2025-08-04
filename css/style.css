@@ -154,12 +154,15 @@ h2 {
   display: none;
   position: fixed;
   inset: 0;
+  height: 100vh; /* ✅ Ensure full screen height */
+  width: 100%;
   z-index: 999;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   animation: fadeOverlay 0.3s ease forwards;
   
-  /* Center modal */
+  /* Flex center */
+  display: flex; /* Default for alignment (JS overrides show/hide) */
   justify-content: center;
   align-items: center;
   padding: 20px;

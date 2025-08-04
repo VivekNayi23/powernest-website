@@ -39,21 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.querySelectorAll('.see-more-btn').forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    const modal = document.querySelectorAll('.modal')[index];
-    modal.style.display = 'flex'; // Centered
+  document.querySelectorAll('.see-more-btn').forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      const modal = document.querySelectorAll('.modal')[index];
+      modal.style.display = 'flex'; // Centered
+    });
   });
-});
 
-document.querySelectorAll('.close').forEach(closeBtn => {
-  closeBtn.addEventListener('click', () => {
-    closeBtn.closest('.modal').style.display = 'none';
+  document.querySelectorAll('.close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+      closeBtn.closest('.modal').style.display = 'none';
+    });
   });
-});
 
-window.addEventListener('click', (e) => {
-  if (e.target.classList.contains('modal')) {
-    e.target.style.display = 'none';
-  }
-});
+  window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+      e.target.style.display = 'none';
+    }
+  });
