@@ -149,32 +149,36 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* Responsive Modal Popup */
+/* Responsive Modal Popup - Centered */
 .modal {
   display: none;
   position: fixed;
-  z-index: 999;
   inset: 0;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   animation: fadeOverlay 0.3s ease forwards;
+  
+  /* Center modal */
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  overflow-y: auto;
 }
 
 .modal-content {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  margin: auto;
   padding: 25px 30px;
   border-radius: 16px;
   width: 100%;
   max-width: 800px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
-  transform: scale(0.85) translateY(-20px);
+  transform: scale(0.85);
   opacity: 0;
   animation: scaleUp 0.4s ease forwards;
   position: relative;
+
+  /* For tall content on small screens */
   max-height: 90vh;
   overflow-y: auto;
 }
