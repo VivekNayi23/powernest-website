@@ -196,17 +196,19 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* Modal List */
+/* Unified Modal List Styles */
 .modal-content ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .modal-content ul li {
   position: relative;
-  padding-left: 25px;
-  margin-bottom: 10px;
+  padding-left: 28px; /* space for checkmark */
+  margin-bottom: 12px;
   font-size: 1rem;
+  line-height: 1.5;
   color: var(--text);
 }
 
@@ -214,9 +216,23 @@ h2 {
   content: "✔";
   position: absolute;
   left: 0;
-  top: 0;
+  top: 0.15rem;
+  font-size: 1rem; /* same size across devices */
   color: var(--accent);
-  font-size: 1.1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .modal-content ul li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    padding-left: 25px;
+  }
+
+  .modal-content ul li::before {
+    font-size: 0.9rem;
+    top: 0.2rem;
+  }
 }
 
 /* Close Button */
