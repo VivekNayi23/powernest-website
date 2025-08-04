@@ -39,12 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-  document.querySelectorAll('.see-more-btn').forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-      const modal = document.querySelectorAll('.modal')[index];
-      modal.style.display = 'flex'; // Centered
-    });
+  document.querySelectorAll('.see-more-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modalId = btn.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = 'flex';
+    }
   });
+});
 
   document.querySelectorAll('.close').forEach(closeBtn => {
     closeBtn.addEventListener('click', () => {
