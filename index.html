@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
   <!-- Header -->
@@ -33,7 +35,8 @@
   <!-- About -->
   <section id="about" class="fade-in">
     <h2>Who We Are</h2>
-    <p>PowerNest Digital is a results-driven team delivering enterprise-grade digital solutions. We translate business needs into scalable, secure, and intuitive digital experiences.</p>
+    <p>PowerNest Digital is a results-driven team delivering enterprise-grade digital solutions. We translate business
+      needs into scalable, secure, and intuitive digital experiences.</p>
   </section>
 
   <!-- Process -->
@@ -57,37 +60,65 @@
 
   <!-- Services -->
   <section id="services" class="fade-in">
-    <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>Modern web apps using React, Angular, or Vue. SEO-optimized, lightning-fast, and cross-platform.</p>
-      </div>
-      <div class="card">
-        <h3>SharePoint Solutions</h3>
-        <p>Custom SPFx web parts, workflows, and secure content management tailored for collaboration.</p>
-      </div>
-      <div class="card">
-        <h3>Power Platform</h3>
-        <p>Canvas & Model-Driven Apps, Power Automate flows, Power BI dashboards—insights, automation, action.</p>
-      </div>
+  <h2>Our Services</h2>
+  <div class="grid">
+    <!-- Web Development -->
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>Building modern, responsive, and result-driven web solutions.</p>
+      <!-- <button class="see-more-btn" data-modal="modal-webdev">See More</button> -->
     </div>
-  </section>
 
-  <!-- Testimonials 
-  <section id="testimonials" class="fade-in">
-    <h2>Client Testimonials</h2>
-    <div class="grid">
-      <div class="card">
-        <p>“PowerNest transformed our document management with SharePoint automation—it’s a game-changer.”</p>
-        <h4>— Arun Sharma</h4>
-      </div>
-      <div class="card">
-        <p>“Their React site doubled our traffic and improved conversions in weeks.”</p>
-        <h4>— Priya Desai</h4>
-      </div>
+    <!-- SharePoint Solutions -->
+    <div class="card">
+      <h3>SharePoint Solutions</h3>
+      <p>Custom SPFx web parts, workflows, and secure content management tailored for collaboration.</p>
+      <button class="see-more-btn" data-modal="modal-sharepoint">See More</button>
     </div>
-  </section>-->
+
+    <!-- Power Platform -->
+    <div class="card">
+      <h3>Power Platform</h3>
+      <p>Canvas & Model-Driven Apps, Power Automate flows, Power BI dashboards—insights, automation, action.</p>
+      <button class="see-more-btn" data-modal="modal-powerplatform">See More</button>
+    </div>
+  </div>
+</section>
+
+  <!-- SharePoint Solutions Modal -->
+  <div id="modal-sharepoint" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>SharePoint Solutions</h2>
+      <p>We deliver robust and scalable SharePoint solutions for modern workplaces.</p>
+      <ul>
+        <li>Worked on SharePoint 2013, 2019, and SharePoint Online</li>
+        <li>Full SharePoint migration services</li>
+        <li>Custom SPFx Web Parts development</li>
+        <li>Automated workflows using Power Automate</li>
+        <li>Secure document management & collaboration</li>
+        <li>Modern UI/UX customization for SharePoint sites</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Power Platform Modal -->
+  <div id="modal-powerplatform" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Power Platform</h2>
+      <p>We create highly customized business solutions with Power Platform.</p>
+      <ul>
+        <li>Build Canvas Apps from scratch</li>
+        <li>Integrate multiple data sources (SharePoint, SQL, Dataverse, etc.)</li>
+        <li>Advanced Power Automate flows for process automation</li>
+        <li>Custom Power BI dashboards for business insights</li>
+        <li>Model-Driven Apps with complex business logic</li>
+        <li>End-to-end Power Platform consultation & deployment</li>
+      </ul>
+    </div>
+  </div>
+
 
   <!-- Contact -->
   <section id="contact" class="fade-in">
@@ -98,14 +129,15 @@
       <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-</section>
+  </section>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 PowerNest Digital. All rights reserved.</p>
     <p><a href="#home">Back to top ↑</a></p>
   </footer>
-  
+
   <script src="js/main.js"></script>
 </body>
+
 </html>

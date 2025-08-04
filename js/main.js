@@ -38,3 +38,25 @@ document.addEventListener("DOMContentLoaded", () => {
     e.target.reset();
   });
 });
+
+document.querySelectorAll(".see-more-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    let modalId = btn.getAttribute("data-modal");
+    let modal = document.getElementById(modalId);
+    modal.style.display = "block";
+  });
+});
+
+document.querySelectorAll(".close").forEach(closeBtn => {
+  closeBtn.addEventListener("click", () => {
+    closeBtn.closest(".modal").style.display = "none";
+  });
+});
+
+window.addEventListener("click", (e) => {
+  document.querySelectorAll(".modal").forEach(modal => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
