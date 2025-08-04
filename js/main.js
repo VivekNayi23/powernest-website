@@ -37,26 +37,40 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Thanks! Your message has been sent.");
     e.target.reset();
   });
-});
 
-  document.querySelectorAll('.see-more-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const modalId = btn.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-    if (modal) {
-      modal.style.display = 'flex';
-    }
+  // Modals
+  const modals = document.querySelectorAll(".modal");
+
+  // Ensure all modals are hidden at start
+  modals.forEach(modal => {
+    modal.style.display = "none";
   });
-});
 
-  document.querySelectorAll('.close').forEach(closeBtn => {
-    closeBtn.addEventListener('click', () => {
-      closeBtn.closest('.modal').style.display = 'none';
+  // Open modal on button click
+  document.querySelectorAll(".see-more-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.getAttribute("data-modal");
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "flex";
+      }
     });
   });
 
-  window.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal')) {
-      e.target.style.display = 'none';
+  // Close modal on X click
+  document.querySelectorAll(".close").forEach(closeBtn => {
+    closeBtn.addEventListener("click", () => {
+      const modal = closeBtn.closest(".modal");
+      if (modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+
+  // Close modal on outside click
+  window.addEventListener("click", e => {
+    if (e.target.classList.contains("modal")) {
+      e.target.style.display = "none";
     }
   });
+});

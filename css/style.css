@@ -151,7 +151,7 @@ h2 {
 
 /* Responsive Modal Popup - Centered */
 .modal {
-  display: none;
+  display: none; /* Start hidden */
   position: fixed;
   inset: 0; /* top:0; left:0; bottom:0; right:0; */
   height: 100vh; /* full viewport height */
